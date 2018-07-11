@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FabFlix Checkout</title>
+    <style>
+	    body {
+	    	margin: 0;
+	        padding: 0;
+	        background-color: lightblue;          
+	    }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+	<h1 align="center">FabFlix Checkout</h1>
+	<button onclick="back()">back</button>
+	<button onclick="forward()">forward</button>
+	<a id="cart" href='./cart.html'>Shopping Cart</a>
+	<h1 align="center">Confirm Details</h1>
+	<h3 id="cart_info"></h3>
+		<table id=customer_table class="table table-striped">
+		<thead>
+		<tr>
+			<th>Name</th>
+			<th>Credit Card ID</th>
+			<th>Address</th>
+		</tr>
+		</thead>
+		<tbody id=customer_table_body></tbody>
+		
+		<table id=movie_table class="table table-striped">
+		<thead>
+		<tr>
+			<th>Movie</th>
+			<th>Quantity</th>
+		</tr>
+		</thead>
+		<tbody id=movie_table_body></tbody>
+	</table>
+	
+	<div id="cart">
+		<form align="center" id="confirm_form" method="GET" action="confirm.html">
+		    <button type="confirm" value="confirm">confirm checkout</button>
+		</form>
+	</div>
+	<div id="cart">
+		<form align="center" id="back_form" method="GET" action="cart.html">
+		    <button type="back" value="confirm">back</button>
+		</form>
+	</div>
+	
+	<div id="cart_error_message"></div>
+	
+	<!-- include jQuery-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<!-- include our own JS file -->
+	<script src="checkout.js"></script>
+	<script>
+	<script>
+	function back()
+	{
+		window.history.back();
+	}
+	</script>
+	<script>
+	function forward()
+	{
+		window.history.forward();
+	}
+	</script>
+
+</body>
+</html>

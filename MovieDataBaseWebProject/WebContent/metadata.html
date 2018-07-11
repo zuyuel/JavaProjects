@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title align="center">Metadata</title>
+    <style>
+	    body {
+	    	margin: 0;
+	        padding: 0;
+	        background-color: lightblue;          
+	    }
+		#nav {
+	    	margin-top: 0;
+            padding: 0;
+            height: 0px;
+	    }
+	    #meta_data_table {
+	    	float: left;
+            margin-left: 43%;
+	    }
+	    table {
+	    	font-family: arial, sans-serif;
+	    	border-collapse: collapse;
+	    	width: 100%;
+		}
+		td, th {
+	    	border: 1px solid #dddddd;
+	    	text-align: left;
+	   		padding: 8px;
+		}
+		tr:nth-child(even) {
+		    background-color: #dddddd;
+		}
+	</style>
+</head>
+<body>
+	<div id="nav" >
+		<h1 >
+			<a href='main.html'>Home</a>
+			<button onclick="back()">back</button>
+			<button onclick="forward()">forward</button>
+		</h1>
+		<h2 align="center">Movie Database Metadata</h2>   	
+	</div>
+	<br>
+	<br>
+    <br>
+    <br>
+    <br>
+	
+<table id=metadata_table>
+    <!-- Create a table header -->
+	    <tbody id=metadata_table_body></tbody>
+</table>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="metadata.js"></script>
+<script>
+	function back()
+	{
+		window.history.back();
+	}
+	</script>
+	<script>
+	function forward()
+	{
+		window.history.forward();
+	}
+	</script>
+</body>
+</html>

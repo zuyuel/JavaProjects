@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add/</title>
+    <meta charset="UTF-8">
+    <style>
+	    body {
+	    	margin: 0;
+	        padding: 0;
+	        background-color: lightblue;          
+	    }
+		#nav {
+	    	margin-top: 0;
+            padding: 0;
+            height: 0px;
+	    }
+	    #add_movie {
+	        float: left;
+            height: 30px;
+            margin-left: 43%;
+            margin-top: 20%;
+	    }
+        #add_movie button {
+        	float: left;
+        	margin-left: 43%;
+        	margin-top: 10%;
+        	width: 20%;
+            height: 20px;
+            border: none;
+            color: black;
+       	}
+       	#add_movie_error_message {
+	        float: center;
+            height: 10px;
+            margin-left: 45%;
+            margin-top: 27%;
+            margin-bottom: 42%;
+       	}
+    </style>
+</head>
+<body>
+	<div id="nav" >   
+		<h1 align="center">
+			<img src="https://i.imgur.com/WS3NNJz.png"/>
+		</h1>
+		<h2 align="center">Add or Edit Movies  to FabFlix</h2>
+	</div>
+	
+	<div id="nav" >   
+		<h1>
+			<a href='main.html'>Home</a>
+			<button onclick="back()">back</button>
+			<button onclick="forward()">forward</button>
+		</h1>	
+	</div>
+	
+	<div id="add_movie">
+		<form id="add_movie_form" method="get" action="#">
+		    <label><b>Title: </b></label>
+		    <input id="title" type="text" placeholder="Enter Title" name="title">
+		    <br>
+		    <label><b>Year: </b></label>
+		    <input id="year" type="text" placeholder="Enter Year" name="year">
+		    <br>
+            <label><b>Director: </b></label>
+		    <input id="director" type="text" placeholder="Enter Director" name="director">
+		    <br>
+            <label><b>Star: </b></label>
+		    <input id="star" type="text" placeholder="Enter Star" name="star">
+		    <br>
+            <label><b>Genre: </b></label>
+		    <input id="genre" type="text" placeholder="Enter Genre" name="genre">
+		    <br>
+            <label><b>Rating: </b></label>
+		    <input id="rating" type="text" placeholder="Enter Rating" name="rating">
+		    <br>
+		    <button type="SUBMIT" value="Submit">edit</button>
+		    
+		</form>
+	</div>
+	
+	<div id="add_movie_error_message"></div>
+	
+	<!-- include jQuery-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<!-- include our own JS file -->
+	<script src="./add-movie.js"></script>
+	<script>
+	function back()
+	{
+		window.history.back();
+	}
+	</script>
+	<script>
+	function forward()
+	{
+		window.history.forward();
+	}
+	</script> 
+</body>
+</html>

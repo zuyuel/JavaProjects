@@ -1,0 +1,43 @@
+The XML Parsing optimization is achieved by calling MAX(ID) once and executing that before setting it as a counter (so that it doesn't have to run the query again). This happens in the instances where ID's need to be incremented before adding it to the database: at Stars id, Genres id, and Movies id. Using a HashMap to optimize the XML parsing allows the developer to again use the execution in SQL only once. This reduces the run time of the entire XML Parsing for mains, actors, and casts significantly, or else it would be too expensive to run it every iteration of movies, stars, or genres. 
+
+
+In terms of inconsistent data, there are a few areas where the information on different XML files would be inconsistent. For example, in the casts file, sometimes the stars, stars_in_movies, and the movies they are in are stylized differently. Therefore casts would be unable to insert the values into stars_in_movies accordingly. There is no sure way to indicate which stars correspond to which stars_in_movies and movies, so the entire invalid value has to be thrown/discarded.
+While that is inconsistent data in XML files, there is some misinformation in mySQL entries as well. For example, if the XML file provided no particular birth year for a star, the star's default birth year is set to "0". This is because in Java programming, Integers cannot be set to a "null" value, therefore the work-around is to set the star's birth year to "0" as a way to prevent errors from occurring while executing the SQL entries.
+
+When the program is done, the output should indicate that the program is done parsing all of the information. 
+This is a sample output:
+
+Done with parsing Movies!
+Done with parsing Genres!
+Done with parsing Genre in Movies!
+Done with Stars!
+Done with Stars in Movies!
+Done, check MySQL for all the entries.
+XML Parsing total duration: 301.953470253 seconds
+
+The last line indicates the run time of the full program.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SELECT ID FROM STARS WHERE NAME
+SELECT ID FROM MOVIES WHERE NAME
+RUN SQL QUERY IN THE BEGINNING TO STORE THE IDS
